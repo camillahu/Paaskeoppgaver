@@ -1,12 +1,12 @@
 const app = document.getElementById("app");
 
 let user= "Påskeharen";
-let counter = null;
 
-const currentDate = new Date();
-const dayOfMonth = currentDate.getDate();
-console.log(counter)
+const currentDate = new Date().getDate();
+console.log(currentDate)
 
-const easterDate = 30;
+const easterDate = new Date("Mar 30, 2024").getDate();
+console.log(easterDate)
+let counter = easterDate - currentDate;
 
 

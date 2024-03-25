@@ -1,5 +1,4 @@
 
-calculateDays(currentDate, easterDate, displayDOM);
 updateView();
 function updateView() {
     app.innerHTML= /*HTML*/ `
