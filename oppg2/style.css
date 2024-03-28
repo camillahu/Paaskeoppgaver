@@ -1,0 +1,73 @@
+.newCardGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+input {
+    width: 300px;
+    margin-bottom: 10px;
+}
+
+.picturesGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+.picturesGrid > img{
+    width: 100px;
+    margin: 10px;
+}
+.picturesGrid > img:hover{
+    cursor: pointer;
+    border: solid rgb(75, 74, 74) 3px;
+}
+.pictureClicked {
+    border: solid rgb(0, 0, 0) 3px;
+}
+.choosePictureText {
+    font-weight: bold;
+}
+.saveAndDisplayBtns {
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+}
+.saveAndDisplayBtns > button {
+    margin: 10px;
+}
+.dNCGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid grey;
+    width: 600px;
+}
+.dNCImg {
+    display: flex;
+    width: 300px;
+}
+.dNCText {
+    text-align: center;
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+.dNCContent {
+    font-weight: lighter;
+    margin-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.dNCBtns {
+    margin: 12px;
+}
+.dNCBtns > button{
+    color: rgb(255, 255, 255);
+    background-color: rgb(52, 194, 194);
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+}
+.dNCBtns > button:hover{
+    background-color: rgb(48, 167, 167);
+    cursor: pointer;
+}
