@@ -21,9 +21,9 @@ function getCurrentView() {
         console.error("current view not found");
     }
 }
-// displayNewCard();
-updateNewCardView();
-// showAllSavedCards();
+displayNewCard();
+// updateNewCardView();
+//  showAllSavedCards();
 function updateNewCardView() {
     app.innerHTML = /*HTML*/ `
     <h1>Create new card</h1>
@@ -64,7 +64,7 @@ function displayNewCard() {
     pushInfoToData();
     app.innerHTML = /*HTML*/ `
     <div class="dNCGrid">
-        <div ><img class="dNCImg" src=${model.data.savedCards[model.data.savedCards.length -1].chosenPicture} alt=""></div>
+        <div ><img class="dNCImg" src=${model.data.savedCards[model.data.savedCards.length -1].chosenPicture} alt="${model.data.savedCards[0].chosenPicture}"></div>
         <div class="dNCText">
             <div>To: ${model.data.savedCards[model.data.savedCards.length -1].recipient}</div> <br>
             <div>From: ${model.data.savedCards[model.data.savedCards.length -1].sender}</div> <br>
@@ -74,7 +74,7 @@ function displayNewCard() {
     <div class="dNCBtns">
     <button onclick="updateNewCardView()">Save card and create new card</button>
     <button onclick="showAllSavedCards()">Save card and show existing cards</button>
-    <button onclick="">Delete and start again</button>
+    <button onclick="deleteNewCard()">Delete and start again</button>
     
     <div>
     `
@@ -82,8 +82,9 @@ function displayNewCard() {
 
 function showAllSavedCards() {
     app.innerHTML = /*HTML*/ `
-    <h1>All saved cards:</h1>
+    <h2>All saved cards:</h2>
     ${savedCardsLoop()}
+    <button onclick= "updateNewCardView()">Create new card</button>
     `
 }
 

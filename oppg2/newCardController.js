@@ -53,6 +53,15 @@ function savedCardsLoop() {
     
 }
 
+function deleteNewCard() {
+    updateNewCardView();
+    const newCardIndex = model.data.savedCards.length-1;
+    model.data.savedCards.splice(newCardIndex, 1);
+}
+
 
 //bugs:
 // man kan få border på flere bilder
+
+// hvis man trykker på preview før man har laga noe kort, så kommer man til en stygg side i stedet
+// for dummy- kortet
