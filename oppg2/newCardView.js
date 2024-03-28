@@ -22,8 +22,8 @@ function getCurrentView() {
     }
 }
 // displayNewCard();
-// updateNewCardView();
-showAllSavedCards();
+updateNewCardView();
+// showAllSavedCards();
 function updateNewCardView() {
     app.innerHTML = /*HTML*/ `
     <h1>Create new card</h1>
@@ -82,11 +82,8 @@ function displayNewCard() {
 
 function showAllSavedCards() {
     app.innerHTML = /*HTML*/ `
-    <div class="savedCardsContainer">
     <h1>All saved cards:</h1>
     ${savedCardsLoop()}
-    </div>
-    
     `
 }
 

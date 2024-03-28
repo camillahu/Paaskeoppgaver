@@ -35,6 +35,9 @@ input {
 .saveAndDisplayBtns > button {
     margin: 10px;
 }
+
+
+
 .dNCGrid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -54,8 +57,8 @@ input {
 .dNCContent {
     font-weight: lighter;
     margin-top: 30px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 18px;
+    padding-right: 18px;
 }
 .dNCBtns {
     margin: 12px;
@@ -70,4 +73,30 @@ input {
 .dNCBtns > button:hover{
     background-color: rgb(48, 167, 167);
     cursor: pointer;
+}
+
+
+
+.sASCGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid grey;
+    width: 200px;
+    margin: 30px; 
+}
+.sASCImg {
+    display: flex;
+    width: 100px;
+}
+.sASCText {
+    text-align: center;
+    font-size: 0.3rem;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.sASCContent {
+    font-weight: lighter;
+    margin-top: 10px;
+    padding-left: 6px;
+    padding-right: 6px;
 }

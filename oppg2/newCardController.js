@@ -33,7 +33,20 @@ model.input.createNewCard.chosenPicture = clickedPicture.src;
 function savedCardsLoop() {
     html= '';
     for(let i=0; i< model.data.savedCards.length; i++){
-        html += /*HTML*/ `<div>${model.data.savedCards[i]}</div>`
+        html += /*HTML*/ `
+        <div class="sASCGrid">
+        <div>
+        <img class="sASCImg" src="${model.data.savedCards[i].chosenPicture}">
+        </div>
+        <div class="sASCText">
+        <div>${model.data.savedCards[i].recipient}</div>
+        <div>${model.data.savedCards[i].sender}</div>
+        <div class="sASCContent">${model.data.savedCards[i].content}</div> 
+        </div>
+        </div>
+        
+        
+        `
         console.log(model.data.savedCards[i])
     }
     return html
