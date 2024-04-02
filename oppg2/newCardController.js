@@ -21,18 +21,25 @@ function manageSenderInput(senderInput) {
 
 function manageContentInput(contentInput) {
     model.input.createNewCard.content = contentInput;
-    
+
 }
 
 function choosePicture(clickedPicture) {
-clickedPicture.classList.toggle('pictureClicked')
-model.input.createNewCard.chosenPicture = clickedPicture.src;
 
+    for (let i = 0; i < model.data.pictures.length; i++) {
+        if(clickedPicture.classList.contains('pictureClicked')) {
+            clickedPicture.classList.remove('pictureClicked')
+        }
+    }
+    clickedPicture.classList.add('pictureClicked')
+    model.input.createNewCard.chosenPicture = clickedPicture.src;
 }
 
+
+
 function savedCardsLoop() {
-    html= '';
-    for(let i=0; i< model.data.savedCards.length; i++){
+    html = '';
+    for (let i = 0; i < model.data.savedCards.length; i++) {
         html += /*HTML*/ `
         <div class="sASCGrid">
         <div>
@@ -50,12 +57,12 @@ function savedCardsLoop() {
         console.log(model.data.savedCards[i])
     }
     return html
-    
+
 }
 
 function deleteNewCard() {
     updateNewCardView();
-    const newCardIndex = model.data.savedCards.length-1;
+    const newCardIndex = model.data.savedCards.length - 1;
     model.data.savedCards.splice(newCardIndex, 1);
 }
 

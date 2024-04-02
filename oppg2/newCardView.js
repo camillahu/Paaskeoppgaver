@@ -21,10 +21,9 @@ function getCurrentView() {
         console.error("current view not found");
     }
 }
-displayNewCard();
-// updateNewCardView();
-//  showAllSavedCards();
+updateNewCardView();
 function updateNewCardView() {
+
     app.innerHTML = /*HTML*/ `
     <h1>Create new card</h1>
 
@@ -46,10 +45,7 @@ function updateNewCardView() {
     <div>
         <div class="choosePictureText">Choose Picture:</div>
             <div class="picturesGrid">
-                <img onclick="choosePicture(this)" src=${model.data.pictures[0]} alt="">
-                <img onclick="choosePicture(this)" src=${model.data.pictures[1]} alt="">
-                <img onclick="choosePicture(this)" src=${model.data.pictures[2]} alt="">
-                <img onclick="choosePicture(this)" src=${model.data.pictures[3]} alt="">
+                ${generateImgs()}
             </div>
         </div>
     </div>
@@ -60,8 +56,20 @@ function updateNewCardView() {
     `
 }
 
+function generateImgs() {
+    let html= "";
+    for(let i = 0; i < model.data.pictures.length; i++) {
+        html += /*HTML*/`
+        <img id="${i}"onclick="choosePicture(this.id)" src=${model.data.pictures[i]} alt="">
+
+        `
+    }
+    return html;
+}
+
 function displayNewCard() {
     pushInfoToData();
+    
     app.innerHTML = /*HTML*/ `
     <div class="dNCGrid">
         <div ><img class="dNCImg" src=${model.data.savedCards[model.data.savedCards.length -1].chosenPicture} alt="${model.data.savedCards[0].chosenPicture}"></div>

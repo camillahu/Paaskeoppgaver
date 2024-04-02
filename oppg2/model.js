@@ -2,7 +2,7 @@ const app = document.getElementById("app");
 const model = {
 
     app: {
-        page: ["createCard", "showNewCard", "showAllCards",] 
+        page: ["createCard", "showNewCard", "showAllCards",],
 
     },
     input: {
