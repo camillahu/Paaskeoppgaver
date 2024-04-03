@@ -3,6 +3,7 @@ const model = {
 
     app: {
         page: ["createCard", "showNewCard", "showAllCards",],
+        chosenPicture: null,
 
     },
     input: {

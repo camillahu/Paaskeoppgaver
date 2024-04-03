@@ -24,15 +24,10 @@ function manageContentInput(contentInput) {
 
 }
 
-function choosePicture(clickedPicture) {
-
-    for (let i = 0; i < model.data.pictures.length; i++) {
-        if(clickedPicture.classList.contains('pictureClicked')) {
-            clickedPicture.classList.remove('pictureClicked')
-        }
-    }
-    clickedPicture.classList.add('pictureClicked')
-    model.input.createNewCard.chosenPicture = clickedPicture.src;
+function clickedPicture(src, id) {
+    model.app.chosenPicture = id;
+    model.input.createNewCard.chosenPicture = src;
+    updateNewCardView();
 }
 
 
@@ -60,15 +55,6 @@ function savedCardsLoop() {
 
 }
 
-function deleteNewCard() {
-    updateNewCardView();
-    const newCardIndex = model.data.savedCards.length - 1;
-    model.data.savedCards.splice(newCardIndex, 1);
-}
-
-
-//bugs:
-// man kan få border på flere bilder
 
 // hvis man trykker på preview før man har laga noe kort, så kommer man til en stygg side i stedet
 // for dummy- kortet
