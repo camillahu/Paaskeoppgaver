@@ -58,3 +58,4 @@ function savedCardsLoop() {
 
 // hvis man trykker på preview før man har laga noe kort, så kommer man til en stygg side i stedet
 // for dummy- kortet
+// når man velger et bilde, så må jeg kalle på updateView, og da blir teksten borte 

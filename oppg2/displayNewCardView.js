@@ -1,6 +1,5 @@
 function displayNewCardView() {
     pushInfoToData();
-    
     app.innerHTML = /*HTML*/ `
     <div class="dNCGrid">
         <div ><img class="dNCImg" src=${model.data.savedCards[model.data.savedCards.length -1].chosenPicture} alt="${model.data.savedCards[0].chosenPicture}"></div>
@@ -14,7 +13,6 @@ function displayNewCardView() {
     <button onclick="updateNewCardView()">Save card and create new card</button>
     <button onclick="showAllSavedCardsView()">Save card and show existing cards</button>
     <button onclick="deleteNewCard()">Delete and start again</button>
-    
     <div>
     `
 }
